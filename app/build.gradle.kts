@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.pmdm.saludoapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.pmdm.saludoapp"
