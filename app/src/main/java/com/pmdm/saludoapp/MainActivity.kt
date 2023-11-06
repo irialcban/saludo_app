@@ -1,5 +1,6 @@
 package com.pmdm.saludoapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -19,9 +20,12 @@ class MainActivity : AppCompatActivity() {
             //Log.i("Test","Botón pulsado")
             val name = etName.text.toString()
             //Toast.makeText(this,"Hola $name!",Toast.LENGTH_LONG).show()
-            if(name.isNotEmpty()) {
-                Snackbar.make(btnHello,"Hola $name!",Snackbar.LENGTH_SHORT).setAnchorView(btnHello).setAction("CLOSE"){ finishAffinity()}.show()
-            }
+            //if(name.isNotEmpty()) {
+            //    Snackbar.make(btnHello,"Hola $name!",Snackbar.LENGTH_SHORT).setAnchorView(btnHello).setAction("CLOSE"){ finishAffinity()}.show()
+            //}
+            val intentGA = Intent(this,GreetingActivity::class.java)
+            intentGA.putExtra("EXTRA_NAME",name)
+            startActivity(intentGA)
         }
     }
 }
