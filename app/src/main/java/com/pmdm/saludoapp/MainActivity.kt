@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             //if(name.isNotEmpty()) {
             //    Snackbar.make(btnHello,"Hola $name!",Snackbar.LENGTH_SHORT).setAnchorView(btnHello).setAction("CLOSE"){ finishAffinity()}.show()
             //}else {
-            //    Toast.makeText(this,"Hola $name!",Toast.LENGTH_LONG).show()
+            //    Toast.makeText(this,"Introduce tu nombre",Toast.LENGTH_LONG).show()
             val intentGA = Intent(this,GreetingActivity::class.java)
             intentGA.putExtra("EXTRA_NAME",name)
             startActivity(intentGA)
