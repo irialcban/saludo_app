@@ -19,10 +19,11 @@ class MainActivity : AppCompatActivity() {
         btnHello.setOnClickListener {
             //Log.i("Test","Botón pulsado")
             val name = etName.text.toString()
-            //Toast.makeText(this,"Hola $name!",Toast.LENGTH_LONG).show()
+            
             //if(name.isNotEmpty()) {
             //    Snackbar.make(btnHello,"Hola $name!",Snackbar.LENGTH_SHORT).setAnchorView(btnHello).setAction("CLOSE"){ finishAffinity()}.show()
-            //}
+            //}else {
+            //    Toast.makeText(this,"Hola $name!",Toast.LENGTH_LONG).show()
             val intentGA = Intent(this,GreetingActivity::class.java)
             intentGA.putExtra("EXTRA_NAME",name)
             startActivity(intentGA)
